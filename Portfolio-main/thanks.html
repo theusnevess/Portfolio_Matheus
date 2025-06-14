@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Mensagem Enviada | Matheus Neves</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <style>
+        .thanks-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .checkmark {
+            font-size: 5rem;
+            color: #00d4ff;
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+        }
+        
+        .thanks-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #00d4ff;
+        }
+        
+        .thanks-message {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fundo de estrelas animado -->
+    <div class="stars-background">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+    </div>
+
+    <div class="thanks-container">
+        <div class="checkmark cosmic-text">✓</div>
+        <h1 class="thanks-title cosmic-title">Mensagem Enviada com Sucesso!</h1>
+        <p class="thanks-message cosmic-text">
+            Sua mensagem foi transmitida através do cosmos e chegou ao meu terminal. 
+            Entrarei em contato em breve através dos canais de comunicação intergaláctica.
+        </p>
+        <a href="index.html" class="cosmic-button">🚀 Voltar ao Portfólio</a>
+    </div>
+
+    <script src="js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* hobbies.css - Seção de Hobbies (Unidades em PX) */
+
+.hobbies {
+  padding: 80px 0;
+  background: #0a0e17;
+  position: relative;
+  overflow: hidden;
+}
+
+.hobbies::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="1" fill="%2300f3ff" opacity="0.3"/></svg>');
+  background-size: 30px 30px;
+  opacity: 0.3;
+  animation: starScroll 100s linear infinite;
+}
+
+@keyframes starScroll {
+  from { background-position: 0 0; }
+  to { background-position: 500px 1000px; }
+}
+
+.hobbies__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hobby-card {
+  background: rgba(15, 20, 30, 0.6);
+  border: 1px solid rgba(0, 243, 255, 0.2);
+  border-radius: 10px;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 400ms ease;
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+
+.hobby-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 243, 255, 0.15);
+  border-color: var(--cor-destaque);
+}
+
+.hobby-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 5px rgba(0, 243, 255, 0.3));
+  transition: all 400ms ease;
+}
+
+.hobby-card:hover img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px var(--cor-destaque));
+}
+
+.hobby-card p {
+  font-size: 16px;
+  font-family: var(--fonte-titulo);
+  color: var(--cor-texto);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.hobby-orbit {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 1px dashed rgba(0, 243, 255, 0.3);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 800ms ease;
+}
+
+.hobby-card:hover .hobby-orbit {
+  width: 120px;
+  height: 120px;
+  border-color: var(--cor-destaque);
+}
+
+.hobby-card:hover .hobby-orbit::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--cor-destaque);
+  border-radius: 50%;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px var(--cor-destaque);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hobbies {
+    padding: 60px 0;
+  }
+  
+  .hobbies__grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+  }
+  
+  .hobby-card {
+    height: 130px;
+    padding: 20px 10px;
+  }
+  
+  .hobby-card img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hobbies__grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+  }
+  
+  .hobby-card {
+    height: 110px;
+    padding: 15px 5px;
+  }
+  
+  .hobby-card p {
+    font-size: 14px;
+  }
+  
+  .hobby-orbit {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .hobby-card:hover .hobby-orbit {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Animação de órbita */
+@keyframes orbit {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
