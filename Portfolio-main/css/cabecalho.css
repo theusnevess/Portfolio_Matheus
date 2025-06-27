@@ -1,8 +1,6 @@
-/* === CABEÇALHO ESPACIAL - VERSÃO FULL WIDTH === */
+/* === CABEÇALHO ESPACIAL - RESPONSIVO === */
 .cabecalho {
   position: relative;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 1;
   padding: 16px 0;
@@ -19,14 +17,17 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Permite quebra em mobile */
 }
 
+/* Nome/Título */
 .cabecalho__nome {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  min-width: 250px; /* Largura mínima para o nome */
+  min-width: auto; /* Ajustado para mobile */
+  z-index: 2; /* Fica acima do menu mobile */
 }
 
 .cabecalho__nome .cosmic-text {
@@ -37,7 +38,8 @@
   background-clip: text;
   color: transparent;
   letter-spacing: 1.5px;
-  white-space: nowrap; /* Impede quebra de linha */
+  white-space: nowrap;
+  transition: font-size 0.3s ease; /* Suaviza redimensionamento */
 }
 
 .subtitle {
@@ -48,9 +50,9 @@
   letter-spacing: 1px;
 }
 
-/* MENU PRINCIPAL */
+/* MENU PRINCIPAL - DESKTOP */
 .cabecalho__menu {
-  flex-grow: 1; /* Ocupa o espaço disponível */
+  flex-grow: 1;
   display: flex;
   justify-content: flex-end;
 }
@@ -60,6 +62,7 @@
   gap: 25px;
   list-style: none;
   padding-left: 20px;
+  margin: 0;
 }
 
 .cabecalho__menu-link {
@@ -70,5 +73,120 @@
   text-transform: uppercase;
   letter-spacing: 1.2px;
   white-space: nowrap;
+  color: var(--cor-texto);
+  transition: color 0.3s ease;
 }
 
+.cabecalho__menu-link:hover {
+  color: var(--cor-destaque);
+}
+
+/* Ícone do Menu Mobile (hidden por padrão) */
+.menu-mobile__botao {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--cor-destaque);
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 3;
+  padding: 10px;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+  .cabecalho__menu-lista {
+    gap: 15px;
+  }
+  
+  .cabecalho__menu-link {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+}
+
+/* Mobile (até 767px) */
+@media (max-width: 767px) {
+  .cabecalho__conteudo {
+    padding: 15px 20px;
+    position: relative;
+  }
+  
+  .cabecalho__nome .cosmic-text {
+    font-size: 20px;
+  }
+  
+  .subtitle {
+    font-size: 12px;
+  }
+  
+  /* Esconde menu desktop */
+  .cabecalho__menu {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(1, 1, 8, 0.95);
+    backdrop-filter: blur(15px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease;
+    z-index: 1;
+  }
+  
+  .cabecalho__menu--ativo {
+    transform: translateX(-100%);
+  }
+  
+  .cabecalho__menu-lista {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .cabecalho__menu-link {
+    font-size: 18px;
+    padding: 12px 0;
+  }
+  
+  /* Mostra ícone do menu mobile */
+  .menu-mobile__botao {
+    display: block;
+  }
+  
+  /* Efeito de item ativo */
+  .cabecalho__menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--cor-destaque);
+    transition: width 0.3s ease;
+  }
+  
+  .cabecalho__menu-link:hover::after {
+    width: 100%;
+  }
+}
+
+/* Pequenos Mobiles (até 480px) */
+@media (max-width: 480px) {
+  .cabecalho__nome .cosmic-text {
+    font-size: 18px;
+  }
+  
+  .subtitle {
+    font-size: 11px;
+  }
+  
+  .cabecalho__menu-link {
+    font-size: 16px;
+  }
+}

@@ -1,36 +1,32 @@
-/* sobremim.css - Seção Sobre Mim (Pixel Units) */
-
+/* === SEÇÃO SOBRE MIM === */
 .sobremim {
-  position: relative;
+  background-color: transparent;
   padding: 80px 0;
-  background: transparent; /* Changed to transparent */
-  border-top: 1px solid rgba(0, 243, 255, 0.2);
-  border-bottom: 1px solid rgba(0, 243, 255, 0.2);
-  overflow: hidden;
+  color: #e0e0e0;
+  border-top: 1px solid rgba(0, 243, 255, 0.1);
 }
 
-.sobremim::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%2300f3ff" opacity="0.5"/></svg>');
-  background-size: 40px 40px;
-  opacity: 0.15;
-  animation: starMove 100s linear infinite;
+.sobremim__conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-@keyframes starMove {
-  from { background-position: 0 0; }
-  to { background-position: 1000px 1000px; }
+.sobremim__descricao {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-family: 'Space Mono', monospace;
+  color: #e0e0e0;
 }
 
 .section-title {
-  font-size: 32px;
-  margin-bottom: 40px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
   text-align: center;
+  color: #00f3ff;
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -39,81 +35,27 @@
   display: block;
   width: 100px;
   height: 3px;
-  background: linear-gradient(90deg, var(--cor-destaque), transparent);
+  background: linear-gradient(90deg, #00f3ff, transparent);
   margin: 16px auto 0;
 }
 
-.sobremim__conteudo {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-}
-
-.sobremim__descricao {
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 25px;
-  position: relative;
-  padding-left: 30px;
-  border-left: 2px solid var(--cor-destaque);
-}
-
-.sobremim__descricao::before {
-  content: '✦';
-  position: absolute;
-  left: -15px;
-  color: var(--cor-destaque);
-  font-size: 24px;
-}
-
-.sobremim__descricao:nth-child(even) {
-  border-left-color: var(--cor-destaque-escuro);
-}
-
-.sobremim__descricao:nth-child(even)::before {
-  color: var(--cor-destaque-escuro);
-}
-
-/* Efeitos Especiais */
-.cosmic-text {
-  text-shadow: 0 0 5px rgba(0, 243, 255, 0.3);
-}
-
-/* Responsividade */
 @media (max-width: 768px) {
-  .sobremim {
-    padding: 60px 0;
-  }
-  
-  .section-title {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-  
   .sobremim__descricao {
-    font-size: 16px;
-    padding-left: 25px;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    text-align: justify;
   }
-  
-  .sobremim__descricao::before {
-    left: -12px;
-    font-size: 20px;
+
+  .section-title {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .sobremim {
-    padding: 40px 0;
-  }
-  
-  .section-title {
-    font-size: 24px;
-  }
-  
   .sobremim__descricao {
-    padding-left: 20px;
-    border-left-width: 1px;
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
   }
 }

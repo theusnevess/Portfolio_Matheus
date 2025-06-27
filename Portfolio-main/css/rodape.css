@@ -1,7 +1,7 @@
 /* rodape.css - Versão com Cor Sólida como o Cabeçalho */
 
 .rodape {
-  background: rgba(10, 14, 23, 0.95); /* Cor igual ao cabeçalho */
+  background: transparent; /* Cor igual ao cabeçalho */
   padding: 30px 0;
   border-top: 1px solid rgba(0, 243, 255, 0.15);
   position: relative;

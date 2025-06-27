@@ -1,6 +1,6 @@
 /* === VARIÁVEIS CSS === */
 :root {
-  --cor-fundo: #070b14; /* Alterado: #0a0e17 → #070b14 (12% mais escuro) */
+  --cor-fundo: #010108;
   --cor-texto: #e0e0e0;
   --cor-destaque: #00f3ff;
   --cor-destaque-escuro: #0066ff;
@@ -9,43 +9,22 @@
   --fonte-texto: 'Space Mono', monospace;
 }
 
-/* === RESET E BASE === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  position: relative;
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto);
-  font-family: var(--fonte-texto);
-  font-size: 16px;
-  line-height: 24px;
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-
+/* === ANIMAÇÃO DE ESTRELAS (FULL PAGE) === */
 body::before {
   content: '';
-  position: fixed;
+  position: fixed; /* Alterado para fixed para cobrir toda a viewport */
   top: 0;
   left: 0;
   width: 300%;
   height: 300%;
   background:
-    radial-gradient(1px 1px at 15% 25%, rgba(255,255,255,0.8), transparent),
-    radial-gradient(1px 1px at 35% 75%, rgba(255,255,255,0.8), transparent),
-    radial-gradient(1px 1px at 65% 15%, rgba(255,255,255,0.8), transparent),
-    radial-gradient(1px 1px at 85% 65%, rgba(255,255,255,0.8), transparent);
+    radial-gradient(1px 1px at 15% 25%, #fff, transparent),
+    radial-gradient(1px 1px at 35% 75%, #fff, transparent),
+    radial-gradient(1px 1px at 65% 15%, #fff, transparent),
+    radial-gradient(1px 1px at 85% 65%, #fff, transparent);
   background-size: 200px 200px;
-  animation: starsScroll 100s linear infinite;
-  opacity: 0.1;
+  animation: starsScroll 80s linear infinite;
+  opacity: 0.3;
   z-index: -1;
 }
 
@@ -70,6 +49,28 @@ body::after {
 @keyframes rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+/* === RESET E BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-texto);
+  font-size: 16px;
+  line-height: 24px;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* === CONTAINERS === */
@@ -188,11 +189,11 @@ section {
   h1 {
     font-size: 48px;
   }
-  
+
   h2 {
     font-size: 36px;
   }
-  
+
   .container {
     padding: 0 24px;
   }
@@ -202,16 +203,16 @@ section {
   h1 {
     font-size: 36px;
   }
-  
+
   h2 {
     font-size: 28px;
     margin-bottom: 24px;
   }
-  
+
   section {
     padding: 60px 0;
   }
-  
+
   .container {
     padding: 0 16px;
   }
@@ -221,15 +222,15 @@ section {
   h1 {
     font-size: 28px;
   }
-  
+
   h2 {
     font-size: 24px;
   }
-  
+
   p {
     font-size: 16px;
   }
-  
+
   section {
     padding: 40px 0;
   }

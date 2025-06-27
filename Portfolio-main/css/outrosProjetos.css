@@ -1,62 +1,200 @@
+/* Cabeçalho */
+.cabecalho_container {
+  position: relative;
+  width: 100%;
+  padding: 16px 0;
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  border-bottom: 1px solid var(--cor-borda);
+  display: flex;
+  justify-content: center;
+}
+
+.cabecalho__conteudo {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.cabecalho__nome {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.cabecalho__nome .cosmic-text {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--cor-destaque), #ffffff);
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 1.5px;
+}
+
+.subtitle {
+  font-family: var(--fonte-texto);
+  font-size: 14px;
+  color: var(--cor-destaque);
+  opacity: 0.9;
+  letter-spacing: 1px;
+}
+
+.voltar-btn {
+  position: fixed; /* Alterado para fixed */
+  left: 10px; /* Posicionado mais à esquerda */
+  top: 20px; /* Distância do topo */
+  padding: 8px 16px !important;
+  font-size: 16px !important;
+  text-decoration: none;
+  z-index: 1000;
+  margin: 0;
+  background-color: rgba(1, 1, 8, 0.7); /* Fundo escuro semi-transparente */
+  backdrop-filter: blur(5px); /* Efeito de blur para combinar com o cabeçalho */
+  border: 1px solid var(--cor-destaque);
+}
+
+.cabecalho__conteudo {
+  position: relative; /* Necessário para posicionar o botão absolutamente */
+}
+
+/* Seção Projetos */
 .projetos {
-    background-color: #0B2027;
-    color: #CFD7C7;
-    padding: 20px 100px;
-    text-align: center;
+  padding: 80px 0;
+  background: transparent;
 }
 
-.projetos__container {
-    margin-top: 50px;
+.section-title,
+.cosmic-section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  border-bottom: none !important;
+  background: none !important;
+  position: relative;
 }
 
-.projetos__container___lista {
-    display: flex;
-    margin-top: 50px;
+/* Remoção de qualquer linha decorativa */
+.section-title::before,
+.section-title::after,
+.cosmic-section-title::before,
+.cosmic-section-title::after {
+  content: none !important;
+  display: none !important;
 }
 
-.projetos__container___item {
-    margin: 50px;
-    text-align: center;
+/* Grid de Projetos */
+.projetos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.projetos__container___item-titulo {
-    font-size: 20px;
-    font-weight: 300;
-    margin-top: 20px;
+/* Cartão de Projeto */
+.projeto-card {
+  background: #010108;
+  border: 1px solid rgba(0, 243, 255, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 400ms ease;
+  position: relative;
+  margin: 0 50px;
 }
 
-
-.projetos__container___item-subtitulo {
-    font-size: 17px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.projeto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 243, 255, 0.15);
+  border-color: var(--cor-destaque);
 }
 
-.projetos__container___item-botoes {
-    background-color: #CFD7C7;
-    border-radius: 20px;
-    border: 1px solid #13293D;
-    color: #13293D;
-    font-size: 15px;
-    margin-top: 50px;
-    margin-right: 10px;
-    text-decoration: none;
-    height: 30px;
-    width: 100px;
-    transition: 2s;
+.projeto__imagem {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+  transition: all 500ms ease;
 }
 
-.projetos__container___item-botoes:hover {
-    text-decoration: underline;
-    cursor: pointer;
+.projeto-card:hover .projeto__imagem {
+  transform: scale(1.03);
+  filter: brightness(1.1) contrast(1.05);
 }
 
-
-.projetos__container___imagem {
-    margin: 20px;
-    width: 600px;
-    height: 350px;
-    border: 2px solid #CFD7C7;
-    border-radius: 10px;
+.projeto__info {
+  padding: 25px;
 }
 
+.projeto__titulo {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--cor-destaque);
+}
+
+.projeto__descricao {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--cor-texto);
+}
+
+.projeto__link {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cosmic-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: 1px solid var(--cor-destaque);
+  border-radius: 6px;
+  color: var(--cor-destaque);
+  text-decoration: none;
+  transition: all 300ms ease;
+}
+
+.cosmic-link:hover {
+  background: rgba(0, 243, 255, 0.1);
+  box-shadow: 0 0 15px var(--cor-destaque);
+}
+
+/* Brilho no Hover */
+.project-glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--cor-destaque) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 400ms ease;
+  top: -50px;
+  right: -50px;
+  pointer-events: none;
+}
+
+.projeto-card:hover .project-glow {
+  opacity: 0.1;
+}
+
+/* Rodapé */
+.rodape {
+  background: transparent;
+  padding: 30px 0;
+  border-top: 1px solid rgba(0, 243, 255, 0.15);
+  position: relative;
+  backdrop-filter: blur(8px);
+  text-align: center;
+}
+
+.rodape__texto {
+  color: var(--cor-texto);
+  font-size: 14px;
+  opacity: 0.8;
+}

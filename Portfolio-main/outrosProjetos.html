@@ -1,101 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚀 Outros Projetos | Matheus Neves</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./css/animations.css">
-    <link rel="stylesheet" href="./css/projetos.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🚀 Outros Projetos | Matheus Neves</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/outrosProjetos.css" />
 </head>
 <body>
-    <!-- Fundo de estrelas animado -->
-    <div class="stars-background">
-        <div class="stars"></div>
-        <div class="stars2"></div>
-        <div class="stars3"></div>
+  <header class="cabecalho_container">
+    <div class="cabecalho__conteudo">
+      <a href="#" class="cosmic-link voltar-btn" onclick="history.back()">
+         ← Voltar
+      </a>
+      <h1 class="cabecalho__nome">
+        <span class="cosmic-text">Matheus Neves</span>
+        <span class="subtitle">🌌 Explorador de Dados</span>
+      </h1>
     </div>
+  </header>
 
-    <header class="cabecalho">
-        <h1 class="cabecalho__nome">
-            <span class="cosmic-text">Matheus Neves</span>
-            <span class="subtitle">🌌 Explorador de Dados</span>
-        </h1>
-        <nav class="cabecalho__menu">
-            <ul class="cabecalho__menu-lista">
-                <li class="cabecalho__menu-itens"><a href="index.html#sobremim" class="cabecalho__menu-link">🛸 Sobre mim</a></li>
-                <li class="cabecalho__menu-itens"><a href="index.html#skills" class="cabecalho__menu-link">⚡ Skills</a></li>
-                <li class="cabecalho__menu-itens"><a href="index.html#hobbies" class="cabecalho__menu-link">🌟 Hobbies</a></li>
-                <li class="cabecalho__menu-itens"><a href="index.html#formacao" class="cabecalho__menu-link">🎓 Formação</a></li>
-                <li class="cabecalho__menu-itens"><a href="index.html#projetos" class="cabecalho__menu-link">🚀 Projetos</a></li>
-                <li class="cabecalho__menu-itens"><a href="index.html#contato" class="cabecalho__menu-link">📡 Contatos</a></li>
-            </ul>
-        </nav>
-    </header>
+  <main class="container">
+    <section class="projetos container" id="projetos">
+      <h2 class="section-title cosmic-section-title">🚀 Projetos Espaciais</h2>
 
-    <main class="container">
-        <section class="projetos" id="projetos">
-            <h2 class="projetos__titulo cosmic-section-title">🚀 Outros Projetos do Universo</h2>
-            
-            <div class="projetos__container">
-                <!-- Projeto 1 -->
-                <div class="projeto cosmic-project">
-                    <img src="./img/projeto1.jpg" alt="Projeto 1" class="projeto__imagem">
-                    <div class="projeto__info">
-                        <h3 class="projeto__titulo">🔭 Explorador de Dados</h3>
-                        <p class="projeto__descricao">
-                            Sistema de análise de dados com Python e Pandas para exploração de datasets complexos.
-                        </p>
-                        <div class="projeto__links">
-                            <a href="#" class="projeto__link cosmic-link">🌐 Demo</a>
-                            <a href="#" class="projeto__link cosmic-link">📂 Repositório</a>
-                        </div>
-                    </div>
-                    <div class="project-glow"></div>
-                </div>
-                
-                <!-- Projeto 2 -->
-                <div class="projeto cosmic-project">
-                    <div class="projeto__info">
-                        <h3 class="projeto__titulo">🛰️ Sistema de Monitoramento</h3>
-                        <p class="projeto__descricao">
-                            Dashboard de monitoramento em tempo real desenvolvido com React e Chart.js.
-                        </p>
-                        <div class="projeto__links">
-                            <a href="#" class="projeto__link cosmic-link">🌐 Demo</a>
-                            <a href="#" class="projeto__link cosmic-link">📂 Repositório</a>
-                        </div>
-                    </div>
-                    <img src="./img/projeto2.jpg" alt="Projeto 2" class="projeto__imagem">
-                    <div class="project-glow"></div>
-                </div>
-                
-                <!-- Adicione mais projetos seguindo o mesmo padrão -->
+      <div class="projetos__grid">
+        <article class="projeto-card cosmic-project">
+          <img src="/Portfolio-main/img/iris.webp" alt="Classificação Íris" class="projeto__imagem" width="600" height="400" />
+          <div class="projeto__info">
+            <h3 class="projeto__titulo">Machine Learning Classificação</h3>
+            <p class="projeto__descricao">
+              Classificação da flor de Íris utilizando modelos de Análise Discriminante com Scikit-learn em Python. O objetivo é prever a espécie da flor com base em suas medidas morfológicas usando LDA, QDA e RDA.
+            </p>
+            <div class="projeto__link">
+              <a href="https://github.com/theusnevess/Biblioteca-de-jogos-" class="cosmic-link" target="_blank" rel="noopener noreferrer">📂 Repositório</a>
             </div>
-            
-            <div class="projetos__voltar">
-                <a href="index.html" class="projetos__link cosmic-link">
-                    🌠 Voltar para o portfólio principal
-                </a>
+          </div>
+          <div class="project-glow"></div>
+        </article>
+
+        <article class="projeto-card cosmic-project">
+          <img src="/Portfolio-main/img/iris.webp" alt="Classificação Íris" class="projeto__imagem" width="600" height="400" />
+          <div class="projeto__info">
+            <h3 class="projeto__titulo">Machine Learning Classificação</h3>
+            <p class="projeto__descricao">
+              Classificação da flor de Íris utilizando modelos de Análise Discriminante com Scikit-learn em Python. O objetivo é prever a espécie da flor com base em suas medidas morfológicas usando LDA, QDA e RDA.
+            </p>
+            <div class="projeto__link">
+              <a href="https://github.com/theusnevess/Biblioteca-de-jogos-" class="cosmic-link" target="_blank" rel="noopener noreferrer">📂 Repositório</a>
             </div>
-        </section>
-    </main>
+          </div>
+          <div class="project-glow"></div>
+        </article>
 
-    <footer class="rodape">
-        <p class="rodape__texto cosmic-text">
-            🌌 Desenvolvido por Matheus Neves - Explorando o infinito através do código
-        </p>
-        <div class="rodape__social">
-            <a href="https://github.com/theusnevess" target="_blank" class="rodape__link cosmic-link">GitHub</a>
-            <a href="https://www.linkedin.com/in/matheus-neves-183a231b2/" target="_blank" class="rodape__link cosmic-link">LinkedIn</a>
-        </div>
-    </footer>
+        <article class="projeto-card cosmic-project">
+          <img src="/Portfolio-main/img/iris.webp" alt="Classificação Íris" class="projeto__imagem" width="600" height="400" />
+          <div class="projeto__info">
+            <h3 class="projeto__titulo">Machine Learning Classificação</h3>
+            <p class="projeto__descricao">
+              Classificação da flor de Íris utilizando modelos de Análise Discriminante com Scikit-learn em Python. O objetivo é prever a espécie da flor com base em suas medidas morfológicas usando LDA, QDA e RDA.
+            </p>
+            <div class="projeto__link">
+              <a href="https://github.com/theusnevess/Biblioteca-de-jogos-" class="cosmic-link" target="_blank" rel="noopener noreferrer">📂 Repositório</a>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </article>
 
-    <script src="js/animations.js"></script>
+        <article class="projeto-card cosmic-project">
+          <img src="/Portfolio-main/img/listajogos.webp" alt="Biblioteca de Jogos" class="projeto__imagem" width="600" height="400" />
+          <div class="projeto__info">
+            <h3 class="projeto__titulo">Biblioteca de Jogos</h3>
+            <p class="projeto__descricao">
+              API REST em Java com Spring Boot para gerenciar um catálogo de jogos. Permite criar, listar e reordenar jogos em listas personalizadas.
+            </p>
+            <div class="projeto__link">
+              <a href="https://github.com/theusnevess/Biblioteca-de-jogos-" class="cosmic-link" target="_blank" rel="noopener noreferrer">📂 Repositório</a>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p class="rodape__texto cosmic-text">🌌 Desenvolvido por Matheus Neves - Explorando o infinito através do código</p>
+    </div>
+  </footer>
+
+  <script src="js/animations.js"></script>
 </body>
 </html>
