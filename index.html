@@ -84,7 +84,7 @@
                     <a href="https://www.linkedin.com/in/matheus-neves-1125632b9/" target="_blank" rel="noopener noreferrer" class="apresentacao__link cosmic-link">
                         💫 LinkedIn <span class="rocket-icon">🚀</span>
                     </a>
-                    <a href="img/curriculo.pdf" target="_blank" rel="noopener noreferrer" class="apresentacao__link cosmic-link">
+                    <a href="/img/Currículo -- Matheus Neves.pdf" target="_blank" rel="noopener noreferrer" class="apresentacao__link cosmic-link">
                         📄 Currículo <span class="rocket-icon">🚀</span>
                     </a>
                 </div>
@@ -183,6 +183,18 @@
                     <p>Git</p>
                     <div class="skill-glow"></div>
                 </div>
+
+                <div class="skill-card cosmic-skill">
+                    <img src="/img/LangChain.webp" alt="git" width="60" height="60">
+                    <p>LangChain</p>
+                    <div class="skill-glow"></div>
+                </div>
+
+                <div class="skill-card cosmic-skill">
+                    <img src="/img/PLN.webp" alt="git" width="60" height="60">
+                    <p>PLN</p>
+                    <div class="skill-glow"></div>
+                </div>
             </div>
         </section>
 
@@ -269,11 +281,11 @@
                     </div> 
 
                     <div class="formacao-card cosmic-formation">
-                        <img src="img/google.webp" alt="google" class="formacao__logo" width="100" height="100">
+                        <img src="/img/ufg.webp" alt="google" class="formacao__logo" width="100" height="100">
                         <div class="formacao__info">
-                            <h3>Análise de Dados</h3>
-                            <p>Google</p>
-                            <span>2024 - Em andamento</span>
+                            <h3>Residência em Tecnologia da Informação e Comunicação (TIC)</h3>
+                            <p>Universidade Federal de Goiás / Brisa</p>
+                            <span>2025 - Em andamento</span>
                         </div>
                         <div class="formation-glow"></div>
                     </div>
@@ -283,6 +295,26 @@
                         <div class="formacao__info">
                          <h3>Oracle Next Education</h3>
                          <p>Oracle/Alura</p>
+                         <span>Concluído</span>
+                        </div>
+                        <div class="formation-glow"></div>
+                    </div>
+
+                    <div class="formacao-card cosmic-formation">
+                        <img src="/img/akcit.webp" alt="oracle" class="formacao__logo" width="100" height="100">
+                        <div class="formacao__info">
+                         <h3>Introdução ao Processamento de Linguagem Natural</h3>
+                         <p>AKCIT / UFG</p>
+                         <span>Concluído</span>
+                        </div>
+                        <div class="formation-glow"></div>
+                    </div>
+
+                    <div class="formacao-card cosmic-formation">
+                        <img src="/img/akcit.webp" alt="oracle" class="formacao__logo" width="100" height="100">
+                        <div class="formacao__info">
+                         <h3>Resolução de problemas com Processamento de Linguagem Natural</h3>
+                         <p>AKCIT / UFG</p>
                          <span>Concluído</span>
                         </div>
                         <div class="formation-glow"></div>
@@ -297,17 +329,16 @@
             
             <div class="projetos__grid">
                 <article class="projeto-card cosmic-project">
-                    <img src="img/iris.webp" alt="Iris Classificação" class="projeto__imagem" width="600" height="400">
+                    <img src="/img/amendoins.png" alt="Predição da produtividade do amendoim" class="projeto__imagem" width="600" height="400">
                     <div class="projeto__info">
-                        <h3 class="projeto__titulo">Machine Learning classificação</h3>
+                        <h3 class="projeto__titulo">Machine Learning - Modelo preditivo da produtividade do amendoim</h3>
                         <p class="projeto__descricao">
-                            Classificação da flor de Íris utilizando modelos de Análise Discriminante com Scikit-learn em Python
-                            O objetivo deste problema é prever a espécie da flor (classe) com base em suas medidas morfológicas. 
-                            Para isso, foram aplicados modelos de Análise Discriminante, incluindo as variantes LDA, QDA e RDA, 
-                            por meio da biblioteca Scikit-learn no ambiente Python.
-                        </p>
+                            Projeto de ciência de dados que explora a aplicação de modelos de Machine Learning para prever a produtividade 
+                            da cultura do amendoim, com uso de algoritmos de Regressão Linear e Redes Neurais Artificiais, sendo uma iniciativa no campo da agricultura de precisão. O principal objetivo foi desenvolver 
+                            um modelo preditivo que utiliza dados agronômicos e climáticos para fornecer insights valiosos a agricultores e
+                            pesquisadores.
                         <div class="projeto__link">
-                            <a href="https://github.com/theusnevess/Biblioteca-de-jogos-" class="projeto__link cosmic-link">
+                            <a href="https://github.com/theusnevess/previsao-da-produtividade-do-amendoim" class="projeto__link cosmic-link">
                                 📂 Repositório
                             </a>
                         </div>
@@ -316,16 +347,18 @@
                 </article>
 
                 <article class="projeto-card cosmic-project">
-                    <img src="img/listajogos.webp" alt="Jogo da Forca" class="projeto__imagem" width="600" height="400">
+                    <img src="img/agent_ai.png" alt="Agente help desk" class="projeto__imagem" width="600" height="400">
                     <div class="projeto__info">
-                        <h3 class="projeto__titulo">Biblioteca de Jogos</h3>
+                        <h3 class="projeto__titulo">Agente Help Desk</h3>
                         <p class="projeto__descricao">
-                            Consiste em uma API REST desenvolvida em Java com Spring Boot, 
-                            cujo objetivo é gerenciar um catálogo de jogos. A aplicação permite criar, listar 
-                            e reordenar jogos dentro de listas personalizadas.
+                            Agente de IA autônomo para revolucionar a triagem de chamados e a consulta de políticas corporativas. 
+                            Utilizando LangChain para orquestrar o fluxo e Google Gemini como cérebro de raciocínio, a solução otimiza o 
+                            tempo de resposta e aumenta a eficiência da equipe de suporte. Utilizando a arquitetura RAG, O agente consulta exclusivamente uma 
+                            base de conhecimento privada (documentos PDF da empresa), garantindo que todas as respostas sejam 100% baseadas nas políticas 
+                            internas e evitando o uso do conhecimento geral do LLM.
                         </p>
                         <div class="projeto__link">
-                            <a href="https://github.com/theusnevess/Biblioteca-de-jogos-" class="projeto__link cosmic-link">
+                            <a href="https://github.com/theusnevess/help-desk-agent_ai" class="projeto__link cosmic-link">
                                 📂 Repositório
                             </a>
                         </div>
@@ -335,7 +368,7 @@
             </div>
             
             <div class="projetos__mais">
-                <a href="https://github.com/theusnevess" class="cosmic-link">
+                <a href="outrosProjetos.html" class="cosmic-link">
                     🌌 Ver mais projetos do universo
                 </a>
             </div>
